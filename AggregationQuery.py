@@ -88,11 +88,11 @@ def gen_queries(query_template_file, all_dims, query_groups):
 
 
 if __name__ == '__main__':
-    all_dims = ['story_id', 'model_id', 'query_type']
+    all_dims = ['story_id', 'model_id', 'query_type', 'status']
     permutations = generate_permutations(len(all_dims))
     query_groups = gen_perc_groups(all_dims, permutations)
 
     queries = gen_queries(
-        r'C:\Users\D070741\Documents\Software Development\Python\Data Science\Fellowship\ColdHotData\query.sql', all_dims, query_groups)
+        r'C:\Users\D070741\Documents\Software Development\Python\Data Science\Fellowship\ColdHotData\query_with_status.sql', all_dims, query_groups)
     stored_proc_query = '\n\nUNION\n'.join(queries) + '\n;'
     write_file(r'C:\Users\D070741\Documents\Software Development\Python\Data Science\Fellowship\ColdHotData\stored_proc_query.sql', stored_proc_query)
