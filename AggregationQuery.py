@@ -30,7 +30,7 @@ def generate_permutations(n):
     return perms
 
 
-def gen_perc_groups(names, permutations):
+def generate_percentile_groups(names, permutations):
     assert len(names) == len(permutations[0])
     queries = []
     group_code = []
@@ -57,16 +57,19 @@ def gen_perc_groups(names, permutations):
 def read_file(file_name):
     with open(file_name, 'r') as f:
         return f.read()
-    
+
+
 def write_file(file_name, text):
     with open(file_name, 'w') as f:
         f.write(text)
+
 
 def query_group_to_string(query_group, sep):
     query_group_nonempty = [x for x in query_group if x]
     return '' if len(query_group_nonempty) == 0 else (sep.join(query_group_nonempty) + sep)
 
-def gen_queries(query_template_file, all_dims, query_groups):
+
+def generate_queries(query_template_file, all_dims, query_groups):
     query_template = read_file(query_template_file)
     queries = []
     sep = ', '
@@ -84,12 +87,26 @@ def gen_queries(query_template_file, all_dims, query_groups):
     return queries
 
 
-if __name__ == '__main__':
-    all_dims = ['story_id', 'model_id', 'query_type', 'status']
-    permutations = generate_permutations(len(all_dims))
-    query_groups = gen_perc_groups(all_dims, permutations)
+def backend_run(dims, template, file_out):
+    backend_dims = ['story_id', 'model_id', 'query_type', 'status']
+    permutations = generate_permutations(len(backend_dims))
+    query_groups = generate_percentile_groups(backend_dims, permutations)
 
-    queries = gen_queries(
-        r'C:\Users\D070741\Documents\Software Development\Python\Data Science\Fellowship\ColdHotData\query\template.sql', all_dims, query_groups)
+    queries = generate_queries(
+        r'C:\Users\D070741\Documents\Software Development\Python\Data Science\Fellowship\ColdHotData\query\template.sql', backend_dims, query_groups)
     stored_proc_query = '\n\nUNION\n'.join(queries) + '\n;'
     write_file(r'C:\Users\D070741\Documents\Software Development\Python\Data Science\Fellowship\ColdHotData\query\results\backend_stored_proc_result.sql', stored_proc_query)
+
+
+def run(dims, file_out):
+    template_file = r'C:\Users\D070741\Documents\Software Development\Python\Data Science\Fellowship\ColdHotData\query\template.sql'
+    permutations = generate_permutations(len(dims))
+    query_groups = generate_percentile_groups(dims, permutations)
+    queries = generate_queries(template_file, dims, query_groups)
+    stored_proc_query = '\n\nUNION\n'.join(queries) + '\n;'
+    write_file(file_out, stored_proc_query)
+
+
+if __name__ == '__main__':
+    run(['story_id', 'model_id', 'query_type', 'status'],
+        r'C:\Users\D070741\Documents\Software Development\Python\Data Science\Fellowship\ColdHotData\query\results\backend_stored_proc_result.sql')
