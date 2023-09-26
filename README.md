@@ -1,6 +1,6 @@
 # Hot/cold data queries
 
-## Generates a query which computes the aggregation on the chosen dimensions
+Generates a query which computes the aggregation on the chosen dimensions
 
 ## How to use it
 - Put the names of the dimensions into the all_dims 
