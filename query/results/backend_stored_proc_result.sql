@@ -9,7 +9,7 @@ story_id, model_id, query_type, status,
       max(duration_perc90_ms) duration_perc90_ms,
       max(duration_perc95_ms) duration_perc95_ms,
       max(duration_perc99_ms) duration_perc99_ms,
-      count(*) AS count_success
+      count(*) AS count
     FROM
       (
         SELECT
@@ -72,7 +72,7 @@ story_id, model_id, query_type, status,
       max(duration_perc90_ms) duration_perc90_ms,
       max(duration_perc95_ms) duration_perc95_ms,
       max(duration_perc99_ms) duration_perc99_ms,
-      count(*) AS count_success
+      count(*) AS count
     FROM
       (
         SELECT
@@ -135,7 +135,7 @@ story_id, model_id, query_type, status,
       max(duration_perc90_ms) duration_perc90_ms,
       max(duration_perc95_ms) duration_perc95_ms,
       max(duration_perc99_ms) duration_perc99_ms,
-      count(*) AS count_success
+      count(*) AS count
     FROM
       (
         SELECT
@@ -198,7 +198,7 @@ story_id, model_id, query_type, status,
       max(duration_perc90_ms) duration_perc90_ms,
       max(duration_perc95_ms) duration_perc95_ms,
       max(duration_perc99_ms) duration_perc99_ms,
-      count(*) AS count_success
+      count(*) AS count
     FROM
       (
         SELECT
@@ -261,7 +261,7 @@ story_id, model_id, query_type, status,
       max(duration_perc90_ms) duration_perc90_ms,
       max(duration_perc95_ms) duration_perc95_ms,
       max(duration_perc99_ms) duration_perc99_ms,
-      count(*) AS count_success
+      count(*) AS count
     FROM
       (
         SELECT
@@ -324,7 +324,7 @@ story_id, model_id, query_type, status,
       max(duration_perc90_ms) duration_perc90_ms,
       max(duration_perc95_ms) duration_perc95_ms,
       max(duration_perc99_ms) duration_perc99_ms,
-      count(*) AS count_success
+      count(*) AS count
     FROM
       (
         SELECT
@@ -387,7 +387,7 @@ story_id, model_id, query_type, status,
       max(duration_perc90_ms) duration_perc90_ms,
       max(duration_perc95_ms) duration_perc95_ms,
       max(duration_perc99_ms) duration_perc99_ms,
-      count(*) AS count_success
+      count(*) AS count
     FROM
       (
         SELECT
@@ -450,7 +450,7 @@ story_id, model_id, query_type, status,
       max(duration_perc90_ms) duration_perc90_ms,
       max(duration_perc95_ms) duration_perc95_ms,
       max(duration_perc99_ms) duration_perc99_ms,
-      count(*) AS count_success
+      count(*) AS count
     FROM
       (
         SELECT
@@ -513,7 +513,7 @@ story_id, model_id, query_type, status,
       max(duration_perc90_ms) duration_perc90_ms,
       max(duration_perc95_ms) duration_perc95_ms,
       max(duration_perc99_ms) duration_perc99_ms,
-      count(*) AS count_success
+      count(*) AS count
     FROM
       (
         SELECT
@@ -576,7 +576,7 @@ story_id, model_id, query_type, status,
       max(duration_perc90_ms) duration_perc90_ms,
       max(duration_perc95_ms) duration_perc95_ms,
       max(duration_perc99_ms) duration_perc99_ms,
-      count(*) AS count_success
+      count(*) AS count
     FROM
       (
         SELECT
@@ -639,7 +639,7 @@ story_id, model_id, query_type, status,
       max(duration_perc90_ms) duration_perc90_ms,
       max(duration_perc95_ms) duration_perc95_ms,
       max(duration_perc99_ms) duration_perc99_ms,
-      count(*) AS count_success
+      count(*) AS count
     FROM
       (
         SELECT
@@ -702,7 +702,7 @@ story_id, model_id, query_type, status,
       max(duration_perc90_ms) duration_perc90_ms,
       max(duration_perc95_ms) duration_perc95_ms,
       max(duration_perc99_ms) duration_perc99_ms,
-      count(*) AS count_success
+      count(*) AS count
     FROM
       (
         SELECT
@@ -765,7 +765,7 @@ story_id, model_id, query_type, status,
       max(duration_perc90_ms) duration_perc90_ms,
       max(duration_perc95_ms) duration_perc95_ms,
       max(duration_perc99_ms) duration_perc99_ms,
-      count(*) AS count_success
+      count(*) AS count
     FROM
       (
         SELECT
@@ -828,7 +828,7 @@ story_id, model_id, query_type, status,
       max(duration_perc90_ms) duration_perc90_ms,
       max(duration_perc95_ms) duration_perc95_ms,
       max(duration_perc99_ms) duration_perc99_ms,
-      count(*) AS count_success
+      count(*) AS count
     FROM
       (
         SELECT
@@ -891,7 +891,7 @@ story_id, model_id, query_type, status,
       max(duration_perc90_ms) duration_perc90_ms,
       max(duration_perc95_ms) duration_perc95_ms,
       max(duration_perc99_ms) duration_perc99_ms,
-      count(*) AS count_success
+      count(*) AS count
     FROM
       (
         SELECT
@@ -954,7 +954,7 @@ story_id, model_id, query_type, status,
       max(duration_perc90_ms) duration_perc90_ms,
       max(duration_perc95_ms) duration_perc95_ms,
       max(duration_perc99_ms) duration_perc99_ms,
-      count(*) AS count_success
+      count(*) AS count
     FROM
       (
         SELECT

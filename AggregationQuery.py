@@ -62,12 +62,9 @@ def write_file(file_name, text):
     with open(file_name, 'w') as f:
         f.write(text)
 
-# def gen_queries(query_template_str, )
-
 def query_group_to_string(query_group, sep):
     query_group_nonempty = [x for x in query_group if x]
     return '' if len(query_group_nonempty) == 0 else (sep.join(query_group_nonempty) + sep)
-
 
 def gen_queries(query_template_file, all_dims, query_groups):
     query_template = read_file(query_template_file)
@@ -93,6 +90,6 @@ if __name__ == '__main__':
     query_groups = gen_perc_groups(all_dims, permutations)
 
     queries = gen_queries(
-        r'C:\Users\D070741\Documents\Software Development\Python\Data Science\Fellowship\ColdHotData\query_with_status.sql', all_dims, query_groups)
+        r'C:\Users\D070741\Documents\Software Development\Python\Data Science\Fellowship\ColdHotData\query\template.sql', all_dims, query_groups)
     stored_proc_query = '\n\nUNION\n'.join(queries) + '\n;'
-    write_file(r'C:\Users\D070741\Documents\Software Development\Python\Data Science\Fellowship\ColdHotData\stored_proc_query.sql', stored_proc_query)
+    write_file(r'C:\Users\D070741\Documents\Software Development\Python\Data Science\Fellowship\ColdHotData\query\results\backend_stored_proc_result.sql', stored_proc_query)
