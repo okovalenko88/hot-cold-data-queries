@@ -114,7 +114,7 @@ class Dim:
 def run_backend():
     folder = f"{QUERY_DIR}\\{BACKEND_DIR}"
     dims = [
-        Dim('story_id', 'string'),
+        Dim('story_hash', 'string'),
         Dim('model_id', 'string'),
         Dim('query_type', 'string'),
         Dim('status', 'string')

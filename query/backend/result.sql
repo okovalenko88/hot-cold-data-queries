@@ -1,9 +1,9 @@
--- 1. 'All' as story_id, 'All' as model_id, 'All' as query_type, 'All' as status
+-- 1. 'All' as story_hash, 'All' as model_id, 'All' as query_type, 'All' as status
 
 
     SELECT
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date,
       max(duration_perc50_ms) duration_perc50_ms,
       max(duration_perc90_ms) duration_perc90_ms,
@@ -14,7 +14,7 @@ story_id, model_id, query_type, status,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-'All' as story_id, 'All' as model_id, 'All' as query_type, 'All' as status, 
+'All' as story_hash, 'All' as model_id, 'All' as query_type, 'All' as status, 
           execution_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -57,16 +57,16 @@ story_id, model_id, query_type, status,
       )
     GROUP BY
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date
 
 UNION
--- 2. 'All' as story_id, 'All' as model_id, 'All' as query_type, status
+-- 2. 'All' as story_hash, 'All' as model_id, 'All' as query_type, status
 
 
     SELECT
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date,
       max(duration_perc50_ms) duration_perc50_ms,
       max(duration_perc90_ms) duration_perc90_ms,
@@ -77,7 +77,7 @@ story_id, model_id, query_type, status,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-'All' as story_id, 'All' as model_id, 'All' as query_type, status, 
+'All' as story_hash, 'All' as model_id, 'All' as query_type, status, 
           execution_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -120,16 +120,16 @@ status,
       )
     GROUP BY
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date
 
 UNION
--- 3. 'All' as story_id, 'All' as model_id, query_type, 'All' as status
+-- 3. 'All' as story_hash, 'All' as model_id, query_type, 'All' as status
 
 
     SELECT
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date,
       max(duration_perc50_ms) duration_perc50_ms,
       max(duration_perc90_ms) duration_perc90_ms,
@@ -140,7 +140,7 @@ story_id, model_id, query_type, status,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-'All' as story_id, 'All' as model_id, query_type, 'All' as status, 
+'All' as story_hash, 'All' as model_id, query_type, 'All' as status, 
           execution_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -183,16 +183,16 @@ query_type,
       )
     GROUP BY
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date
 
 UNION
--- 4. 'All' as story_id, 'All' as model_id, query_type, status
+-- 4. 'All' as story_hash, 'All' as model_id, query_type, status
 
 
     SELECT
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date,
       max(duration_perc50_ms) duration_perc50_ms,
       max(duration_perc90_ms) duration_perc90_ms,
@@ -203,7 +203,7 @@ story_id, model_id, query_type, status,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-'All' as story_id, 'All' as model_id, query_type, status, 
+'All' as story_hash, 'All' as model_id, query_type, status, 
           execution_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -246,16 +246,16 @@ query_type, status,
       )
     GROUP BY
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date
 
 UNION
--- 5. 'All' as story_id, model_id, 'All' as query_type, 'All' as status
+-- 5. 'All' as story_hash, model_id, 'All' as query_type, 'All' as status
 
 
     SELECT
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date,
       max(duration_perc50_ms) duration_perc50_ms,
       max(duration_perc90_ms) duration_perc90_ms,
@@ -266,7 +266,7 @@ story_id, model_id, query_type, status,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-'All' as story_id, model_id, 'All' as query_type, 'All' as status, 
+'All' as story_hash, model_id, 'All' as query_type, 'All' as status, 
           execution_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -309,16 +309,16 @@ model_id,
       )
     GROUP BY
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date
 
 UNION
--- 6. 'All' as story_id, model_id, 'All' as query_type, status
+-- 6. 'All' as story_hash, model_id, 'All' as query_type, status
 
 
     SELECT
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date,
       max(duration_perc50_ms) duration_perc50_ms,
       max(duration_perc90_ms) duration_perc90_ms,
@@ -329,7 +329,7 @@ story_id, model_id, query_type, status,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-'All' as story_id, model_id, 'All' as query_type, status, 
+'All' as story_hash, model_id, 'All' as query_type, status, 
           execution_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -372,16 +372,16 @@ model_id, status,
       )
     GROUP BY
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date
 
 UNION
--- 7. 'All' as story_id, model_id, query_type, 'All' as status
+-- 7. 'All' as story_hash, model_id, query_type, 'All' as status
 
 
     SELECT
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date,
       max(duration_perc50_ms) duration_perc50_ms,
       max(duration_perc90_ms) duration_perc90_ms,
@@ -392,7 +392,7 @@ story_id, model_id, query_type, status,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-'All' as story_id, model_id, query_type, 'All' as status, 
+'All' as story_hash, model_id, query_type, 'All' as status, 
           execution_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -435,16 +435,16 @@ model_id, query_type,
       )
     GROUP BY
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date
 
 UNION
--- 8. 'All' as story_id, model_id, query_type, status
+-- 8. 'All' as story_hash, model_id, query_type, status
 
 
     SELECT
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date,
       max(duration_perc50_ms) duration_perc50_ms,
       max(duration_perc90_ms) duration_perc90_ms,
@@ -455,7 +455,7 @@ story_id, model_id, query_type, status,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-'All' as story_id, model_id, query_type, status, 
+'All' as story_hash, model_id, query_type, status, 
           execution_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -498,16 +498,16 @@ model_id, query_type, status,
       )
     GROUP BY
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date
 
 UNION
--- 9. story_id, 'All' as model_id, 'All' as query_type, 'All' as status
+-- 9. story_hash, 'All' as model_id, 'All' as query_type, 'All' as status
 
 
     SELECT
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date,
       max(duration_perc50_ms) duration_perc50_ms,
       max(duration_perc90_ms) duration_perc90_ms,
@@ -518,7 +518,7 @@ story_id, model_id, query_type, status,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-story_id, 'All' as model_id, 'All' as query_type, 'All' as status, 
+story_hash, 'All' as model_id, 'All' as query_type, 'All' as status, 
           execution_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -526,7 +526,7 @@ story_id, 'All' as model_id, 'All' as query_type, 'All' as status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, 
+story_hash, 
             execution_date
           ) duration_perc50_ms,
           percentile_cont(0.90) within GROUP (
@@ -535,7 +535,7 @@ story_id,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, 
+story_hash, 
             execution_date
           ) duration_perc90_ms,
           percentile_cont(0.95) within GROUP (
@@ -544,7 +544,7 @@ story_id,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, 
+story_hash, 
             execution_date
           ) duration_perc95_ms,
           percentile_cont(0.99) within GROUP (
@@ -553,7 +553,7 @@ story_id,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, 
+story_hash, 
             execution_date
           ) duration_perc99_ms
         FROM
@@ -561,16 +561,16 @@ story_id,
       )
     GROUP BY
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date
 
 UNION
--- 10. story_id, 'All' as model_id, 'All' as query_type, status
+-- 10. story_hash, 'All' as model_id, 'All' as query_type, status
 
 
     SELECT
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date,
       max(duration_perc50_ms) duration_perc50_ms,
       max(duration_perc90_ms) duration_perc90_ms,
@@ -581,7 +581,7 @@ story_id, model_id, query_type, status,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-story_id, 'All' as model_id, 'All' as query_type, status, 
+story_hash, 'All' as model_id, 'All' as query_type, status, 
           execution_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -589,7 +589,7 @@ story_id, 'All' as model_id, 'All' as query_type, status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, status, 
+story_hash, status, 
             execution_date
           ) duration_perc50_ms,
           percentile_cont(0.90) within GROUP (
@@ -598,7 +598,7 @@ story_id, status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, status, 
+story_hash, status, 
             execution_date
           ) duration_perc90_ms,
           percentile_cont(0.95) within GROUP (
@@ -607,7 +607,7 @@ story_id, status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, status, 
+story_hash, status, 
             execution_date
           ) duration_perc95_ms,
           percentile_cont(0.99) within GROUP (
@@ -616,7 +616,7 @@ story_id, status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, status, 
+story_hash, status, 
             execution_date
           ) duration_perc99_ms
         FROM
@@ -624,16 +624,16 @@ story_id, status,
       )
     GROUP BY
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date
 
 UNION
--- 11. story_id, 'All' as model_id, query_type, 'All' as status
+-- 11. story_hash, 'All' as model_id, query_type, 'All' as status
 
 
     SELECT
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date,
       max(duration_perc50_ms) duration_perc50_ms,
       max(duration_perc90_ms) duration_perc90_ms,
@@ -644,7 +644,7 @@ story_id, model_id, query_type, status,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-story_id, 'All' as model_id, query_type, 'All' as status, 
+story_hash, 'All' as model_id, query_type, 'All' as status, 
           execution_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -652,7 +652,7 @@ story_id, 'All' as model_id, query_type, 'All' as status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, query_type, 
+story_hash, query_type, 
             execution_date
           ) duration_perc50_ms,
           percentile_cont(0.90) within GROUP (
@@ -661,7 +661,7 @@ story_id, query_type,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, query_type, 
+story_hash, query_type, 
             execution_date
           ) duration_perc90_ms,
           percentile_cont(0.95) within GROUP (
@@ -670,7 +670,7 @@ story_id, query_type,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, query_type, 
+story_hash, query_type, 
             execution_date
           ) duration_perc95_ms,
           percentile_cont(0.99) within GROUP (
@@ -679,7 +679,7 @@ story_id, query_type,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, query_type, 
+story_hash, query_type, 
             execution_date
           ) duration_perc99_ms
         FROM
@@ -687,16 +687,16 @@ story_id, query_type,
       )
     GROUP BY
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date
 
 UNION
--- 12. story_id, 'All' as model_id, query_type, status
+-- 12. story_hash, 'All' as model_id, query_type, status
 
 
     SELECT
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date,
       max(duration_perc50_ms) duration_perc50_ms,
       max(duration_perc90_ms) duration_perc90_ms,
@@ -707,7 +707,7 @@ story_id, model_id, query_type, status,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-story_id, 'All' as model_id, query_type, status, 
+story_hash, 'All' as model_id, query_type, status, 
           execution_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -715,7 +715,7 @@ story_id, 'All' as model_id, query_type, status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, query_type, status, 
+story_hash, query_type, status, 
             execution_date
           ) duration_perc50_ms,
           percentile_cont(0.90) within GROUP (
@@ -724,7 +724,7 @@ story_id, query_type, status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, query_type, status, 
+story_hash, query_type, status, 
             execution_date
           ) duration_perc90_ms,
           percentile_cont(0.95) within GROUP (
@@ -733,7 +733,7 @@ story_id, query_type, status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, query_type, status, 
+story_hash, query_type, status, 
             execution_date
           ) duration_perc95_ms,
           percentile_cont(0.99) within GROUP (
@@ -742,7 +742,7 @@ story_id, query_type, status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, query_type, status, 
+story_hash, query_type, status, 
             execution_date
           ) duration_perc99_ms
         FROM
@@ -750,16 +750,16 @@ story_id, query_type, status,
       )
     GROUP BY
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date
 
 UNION
--- 13. story_id, model_id, 'All' as query_type, 'All' as status
+-- 13. story_hash, model_id, 'All' as query_type, 'All' as status
 
 
     SELECT
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date,
       max(duration_perc50_ms) duration_perc50_ms,
       max(duration_perc90_ms) duration_perc90_ms,
@@ -770,7 +770,7 @@ story_id, model_id, query_type, status,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-story_id, model_id, 'All' as query_type, 'All' as status, 
+story_hash, model_id, 'All' as query_type, 'All' as status, 
           execution_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -778,7 +778,7 @@ story_id, model_id, 'All' as query_type, 'All' as status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, model_id, 
+story_hash, model_id, 
             execution_date
           ) duration_perc50_ms,
           percentile_cont(0.90) within GROUP (
@@ -787,7 +787,7 @@ story_id, model_id,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, model_id, 
+story_hash, model_id, 
             execution_date
           ) duration_perc90_ms,
           percentile_cont(0.95) within GROUP (
@@ -796,7 +796,7 @@ story_id, model_id,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, model_id, 
+story_hash, model_id, 
             execution_date
           ) duration_perc95_ms,
           percentile_cont(0.99) within GROUP (
@@ -805,7 +805,7 @@ story_id, model_id,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, model_id, 
+story_hash, model_id, 
             execution_date
           ) duration_perc99_ms
         FROM
@@ -813,16 +813,16 @@ story_id, model_id,
       )
     GROUP BY
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date
 
 UNION
--- 14. story_id, model_id, 'All' as query_type, status
+-- 14. story_hash, model_id, 'All' as query_type, status
 
 
     SELECT
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date,
       max(duration_perc50_ms) duration_perc50_ms,
       max(duration_perc90_ms) duration_perc90_ms,
@@ -833,7 +833,7 @@ story_id, model_id, query_type, status,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-story_id, model_id, 'All' as query_type, status, 
+story_hash, model_id, 'All' as query_type, status, 
           execution_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -841,7 +841,7 @@ story_id, model_id, 'All' as query_type, status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, model_id, status, 
+story_hash, model_id, status, 
             execution_date
           ) duration_perc50_ms,
           percentile_cont(0.90) within GROUP (
@@ -850,7 +850,7 @@ story_id, model_id, status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, model_id, status, 
+story_hash, model_id, status, 
             execution_date
           ) duration_perc90_ms,
           percentile_cont(0.95) within GROUP (
@@ -859,7 +859,7 @@ story_id, model_id, status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, model_id, status, 
+story_hash, model_id, status, 
             execution_date
           ) duration_perc95_ms,
           percentile_cont(0.99) within GROUP (
@@ -868,7 +868,7 @@ story_id, model_id, status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, model_id, status, 
+story_hash, model_id, status, 
             execution_date
           ) duration_perc99_ms
         FROM
@@ -876,16 +876,16 @@ story_id, model_id, status,
       )
     GROUP BY
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date
 
 UNION
--- 15. story_id, model_id, query_type, 'All' as status
+-- 15. story_hash, model_id, query_type, 'All' as status
 
 
     SELECT
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date,
       max(duration_perc50_ms) duration_perc50_ms,
       max(duration_perc90_ms) duration_perc90_ms,
@@ -896,7 +896,7 @@ story_id, model_id, query_type, status,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-story_id, model_id, query_type, 'All' as status, 
+story_hash, model_id, query_type, 'All' as status, 
           execution_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -904,7 +904,7 @@ story_id, model_id, query_type, 'All' as status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, model_id, query_type, 
+story_hash, model_id, query_type, 
             execution_date
           ) duration_perc50_ms,
           percentile_cont(0.90) within GROUP (
@@ -913,7 +913,7 @@ story_id, model_id, query_type,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, model_id, query_type, 
+story_hash, model_id, query_type, 
             execution_date
           ) duration_perc90_ms,
           percentile_cont(0.95) within GROUP (
@@ -922,7 +922,7 @@ story_id, model_id, query_type,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, model_id, query_type, 
+story_hash, model_id, query_type, 
             execution_date
           ) duration_perc95_ms,
           percentile_cont(0.99) within GROUP (
@@ -931,7 +931,7 @@ story_id, model_id, query_type,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, model_id, query_type, 
+story_hash, model_id, query_type, 
             execution_date
           ) duration_perc99_ms
         FROM
@@ -939,16 +939,16 @@ story_id, model_id, query_type,
       )
     GROUP BY
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date
 
 UNION
--- 16. story_id, model_id, query_type, status
+-- 16. story_hash, model_id, query_type, status
 
 
     SELECT
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date,
       max(duration_perc50_ms) duration_perc50_ms,
       max(duration_perc90_ms) duration_perc90_ms,
@@ -959,7 +959,7 @@ story_id, model_id, query_type, status,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
           execution_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -967,7 +967,7 @@ story_id, model_id, query_type, status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
             execution_date
           ) duration_perc50_ms,
           percentile_cont(0.90) within GROUP (
@@ -976,7 +976,7 @@ story_id, model_id, query_type, status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
             execution_date
           ) duration_perc90_ms,
           percentile_cont(0.95) within GROUP (
@@ -985,7 +985,7 @@ story_id, model_id, query_type, status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
             execution_date
           ) duration_perc95_ms,
           percentile_cont(0.99) within GROUP (
@@ -994,7 +994,7 @@ story_id, model_id, query_type, status,
           ) over (
             PARTITION by 
             -- <Next line is auto-generated> Partition group
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
             execution_date
           ) duration_perc99_ms
         FROM
@@ -1002,6 +1002,6 @@ story_id, model_id, query_type, status,
       )
     GROUP BY
       -- <Next line is auto-generated> All dimensions
-story_id, model_id, query_type, status, 
+story_hash, model_id, query_type, status, 
       execution_date
 ;
