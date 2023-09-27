@@ -1,4 +1,4 @@
--- 1. 'All' as story_id, 'All' as model_id, 'All' as query_type, 'All' as status, 
+-- 1. 'All' as story_id, 'All' as model_id, 'All' as query_type, 'All' as status
 
 
     SELECT
@@ -61,7 +61,7 @@ story_id, model_id, query_type, status,
       execution_date
 
 UNION
--- 2. 'All' as story_id, 'All' as model_id, 'All' as query_type, status, 
+-- 2. 'All' as story_id, 'All' as model_id, 'All' as query_type, status
 
 
     SELECT
@@ -124,7 +124,7 @@ story_id, model_id, query_type, status,
       execution_date
 
 UNION
--- 3. 'All' as story_id, 'All' as model_id, query_type, 'All' as status, 
+-- 3. 'All' as story_id, 'All' as model_id, query_type, 'All' as status
 
 
     SELECT
@@ -187,7 +187,7 @@ story_id, model_id, query_type, status,
       execution_date
 
 UNION
--- 4. 'All' as story_id, 'All' as model_id, query_type, status, 
+-- 4. 'All' as story_id, 'All' as model_id, query_type, status
 
 
     SELECT
@@ -250,7 +250,7 @@ story_id, model_id, query_type, status,
       execution_date
 
 UNION
--- 5. 'All' as story_id, model_id, 'All' as query_type, 'All' as status, 
+-- 5. 'All' as story_id, model_id, 'All' as query_type, 'All' as status
 
 
     SELECT
@@ -313,7 +313,7 @@ story_id, model_id, query_type, status,
       execution_date
 
 UNION
--- 6. 'All' as story_id, model_id, 'All' as query_type, status, 
+-- 6. 'All' as story_id, model_id, 'All' as query_type, status
 
 
     SELECT
@@ -376,7 +376,7 @@ story_id, model_id, query_type, status,
       execution_date
 
 UNION
--- 7. 'All' as story_id, model_id, query_type, 'All' as status, 
+-- 7. 'All' as story_id, model_id, query_type, 'All' as status
 
 
     SELECT
@@ -439,7 +439,7 @@ story_id, model_id, query_type, status,
       execution_date
 
 UNION
--- 8. 'All' as story_id, model_id, query_type, status, 
+-- 8. 'All' as story_id, model_id, query_type, status
 
 
     SELECT
@@ -502,7 +502,7 @@ story_id, model_id, query_type, status,
       execution_date
 
 UNION
--- 9. story_id, 'All' as model_id, 'All' as query_type, 'All' as status, 
+-- 9. story_id, 'All' as model_id, 'All' as query_type, 'All' as status
 
 
     SELECT
@@ -565,7 +565,7 @@ story_id, model_id, query_type, status,
       execution_date
 
 UNION
--- 10. story_id, 'All' as model_id, 'All' as query_type, status, 
+-- 10. story_id, 'All' as model_id, 'All' as query_type, status
 
 
     SELECT
@@ -628,7 +628,7 @@ story_id, model_id, query_type, status,
       execution_date
 
 UNION
--- 11. story_id, 'All' as model_id, query_type, 'All' as status, 
+-- 11. story_id, 'All' as model_id, query_type, 'All' as status
 
 
     SELECT
@@ -691,7 +691,7 @@ story_id, model_id, query_type, status,
       execution_date
 
 UNION
--- 12. story_id, 'All' as model_id, query_type, status, 
+-- 12. story_id, 'All' as model_id, query_type, status
 
 
     SELECT
@@ -754,7 +754,7 @@ story_id, model_id, query_type, status,
       execution_date
 
 UNION
--- 13. story_id, model_id, 'All' as query_type, 'All' as status, 
+-- 13. story_id, model_id, 'All' as query_type, 'All' as status
 
 
     SELECT
@@ -817,7 +817,7 @@ story_id, model_id, query_type, status,
       execution_date
 
 UNION
--- 14. story_id, model_id, 'All' as query_type, status, 
+-- 14. story_id, model_id, 'All' as query_type, status
 
 
     SELECT
@@ -880,7 +880,7 @@ story_id, model_id, query_type, status,
       execution_date
 
 UNION
--- 15. story_id, model_id, query_type, 'All' as status, 
+-- 15. story_id, model_id, query_type, 'All' as status
 
 
     SELECT
@@ -943,7 +943,7 @@ story_id, model_id, query_type, status,
       execution_date
 
 UNION
--- 16. story_id, model_id, query_type, status, 
+-- 16. story_id, model_id, query_type, status
 
 
     SELECT

@@ -1,4 +1,4 @@
--- 1. 'All' as story_id, 'All' as is_optimized_view_mode, 
+-- 1. 'All' as story_id, 99 as is_optimized_view_mode
 
 
     SELECT
@@ -14,7 +14,7 @@ story_id, is_optimized_view_mode,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-'All' as story_id, 'All' as is_optimized_view_mode, 
+'All' as story_id, 99 as is_optimized_view_mode, 
           action_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -61,7 +61,7 @@ story_id, is_optimized_view_mode,
       action_date
 
 UNION
--- 2. 'All' as story_id, is_optimized_view_mode, 
+-- 2. 'All' as story_id, is_optimized_view_mode
 
 
     SELECT
@@ -124,7 +124,7 @@ story_id, is_optimized_view_mode,
       action_date
 
 UNION
--- 3. story_id, 'All' as is_optimized_view_mode, 
+-- 3. story_id, 99 as is_optimized_view_mode
 
 
     SELECT
@@ -140,7 +140,7 @@ story_id, is_optimized_view_mode,
       (
         SELECT
           -- <Next line is auto-generated> Select group
-story_id, 'All' as is_optimized_view_mode, 
+story_id, 99 as is_optimized_view_mode, 
           action_date,
           percentile_cont(0.5) within GROUP (
             ORDER BY
@@ -187,7 +187,7 @@ story_id, is_optimized_view_mode,
       action_date
 
 UNION
--- 4. story_id, is_optimized_view_mode, 
+-- 4. story_id, is_optimized_view_mode
 
 
     SELECT
