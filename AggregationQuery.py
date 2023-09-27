@@ -1,5 +1,6 @@
 QUERY_DIR = r"C:\Users\D070741\Documents\Software Development\Python\Data Science\Fellowship\ColdHotData\query"
-RESULTS_DIR = "results"
+BACKEND_DIR = 'backend'
+ACTION_DIR = 'action'
 TEMPLATE_FILE = r'C:\Users\D070741\Documents\Software Development\Python\Data Science\Fellowship\ColdHotData\query\template.sql'
 
 
@@ -92,20 +93,20 @@ def generate_queries(query_template_file, all_dims, query_groups):
     return queries
 
 
-def run(dims, file_out):
+def run(dims, template, file_out):
     permutations = generate_permutations(len(dims))
     query_groups = generate_percentile_groups(dims, permutations)
-    queries = generate_queries(TEMPLATE_FILE, dims, query_groups)
+    queries = generate_queries(template, dims, query_groups)
     stored_proc_query = '\n\nUNION\n'.join(queries) + '\n;'
     write_file(file_out, stored_proc_query)
 
 def run_backend():
-    run(['story_id', 'model_id', 'query_type', 'status'],
-        f"{QUERY_DIR}\\{RESULTS_DIR}\\backend_stored_proc_result.sql")
+    folder = f"{QUERY_DIR}\\{BACKEND_DIR}"
+    run(['story_id', 'model_id', 'query_type', 'status'], f"{folder}\\template.sql", f"{folder}\\result.sql")
 
 def run_action():
-    run(['story_id', 'is_optimized_view_mode'],
-        f"{QUERY_DIR}\\{RESULTS_DIR}\\action_stored_proc_result.sql")
+    folder = f"{QUERY_DIR}\\{ACTION_DIR}"
+    run(['story_id', 'is_optimized_view_mode'], f"{folder}\\template.sql", f"{folder}\\result.sql")
 
 
 if __name__ == '__main__':
