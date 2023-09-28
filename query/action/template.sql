@@ -19,7 +19,6 @@ FROM
       ) over (
         PARTITION by 
         <partition_group>
-        action_name,
         action_date
       ) duration_perc50_ms,
       percentile_cont(0.90) within GROUP (

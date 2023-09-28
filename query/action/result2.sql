@@ -20,13 +20,6 @@ FROM
 			'All' as story_id, 99 as is_optimized_view_mode, 
       action_name,
       action_date,
-      case 
-        when action_name = 'Log On' then 'Log On'
-        when action_name in ('Open Story', 'Open Story from URL') then 'Open Story'
-        when action_name in ('Open Application', 'Open Application from URL') then 'Open Application'
-        when action_name in ('Open Application Runtime', 'Open Application Runtime from URL') then 'Open Application Runtime'
-        when action_name in ('Open Presentation', 'Open Presentation from URL') then 'Open Presentation'
-      end as action_name,
       percentile_cont(0.5) within GROUP (
         ORDER BY
           action_duration
@@ -95,13 +88,6 @@ FROM
 			'All' as story_id, is_optimized_view_mode, 
       action_name,
       action_date,
-      case 
-        when action_name = 'Log On' then 'Log On'
-        when action_name in ('Open Story', 'Open Story from URL') then 'Open Story'
-        when action_name in ('Open Application', 'Open Application from URL') then 'Open Application'
-        when action_name in ('Open Application Runtime', 'Open Application Runtime from URL') then 'Open Application Runtime'
-        when action_name in ('Open Presentation', 'Open Presentation from URL') then 'Open Presentation'
-      end as action_name,
       percentile_cont(0.5) within GROUP (
         ORDER BY
           action_duration
@@ -170,13 +156,6 @@ FROM
 			story_id, 99 as is_optimized_view_mode, 
       action_name,
       action_date,
-      case 
-        when action_name = 'Log On' then 'Log On'
-        when action_name in ('Open Story', 'Open Story from URL') then 'Open Story'
-        when action_name in ('Open Application', 'Open Application from URL') then 'Open Application'
-        when action_name in ('Open Application Runtime', 'Open Application Runtime from URL') then 'Open Application Runtime'
-        when action_name in ('Open Presentation', 'Open Presentation from URL') then 'Open Presentation'
-      end as action_name,
       percentile_cont(0.5) within GROUP (
         ORDER BY
           action_duration
@@ -245,13 +224,6 @@ FROM
 			story_id, is_optimized_view_mode, 
       action_name,
       action_date,
-      case 
-        when action_name = 'Log On' then 'Log On'
-        when action_name in ('Open Story', 'Open Story from URL') then 'Open Story'
-        when action_name in ('Open Application', 'Open Application from URL') then 'Open Application'
-        when action_name in ('Open Application Runtime', 'Open Application Runtime from URL') then 'Open Application Runtime'
-        when action_name in ('Open Presentation', 'Open Presentation from URL') then 'Open Presentation'
-      end as action_name,
       percentile_cont(0.5) within GROUP (
         ORDER BY
           action_duration
@@ -322,13 +294,6 @@ FROM
 			'All' as story_id, 99 as is_optimized_view_mode, 
       action_name,
       action_date,
-      case 
-        when action_name = 'Log On' then 'Log On'
-        when action_name in ('Open Story', 'Open Story from URL') then 'Open Story'
-        when action_name in ('Open Application', 'Open Application from URL') then 'Open Application'
-        when action_name in ('Open Application Runtime', 'Open Application Runtime from URL') then 'Open Application Runtime'
-        when action_name in ('Open Presentation', 'Open Presentation from URL') then 'Open Presentation'
-      end as action_name,
       percentile_cont(0.5) within GROUP (
         ORDER BY
           action_duration
@@ -397,13 +362,6 @@ FROM
 			'All' as story_id, is_optimized_view_mode, 
       action_name,
       action_date,
-      case 
-        when action_name = 'Log On' then 'Log On'
-        when action_name in ('Open Story', 'Open Story from URL') then 'Open Story'
-        when action_name in ('Open Application', 'Open Application from URL') then 'Open Application'
-        when action_name in ('Open Application Runtime', 'Open Application Runtime from URL') then 'Open Application Runtime'
-        when action_name in ('Open Presentation', 'Open Presentation from URL') then 'Open Presentation'
-      end as action_name,
       percentile_cont(0.5) within GROUP (
         ORDER BY
           action_duration
@@ -472,13 +430,6 @@ FROM
 			story_id, 99 as is_optimized_view_mode, 
       action_name,
       action_date,
-      case 
-        when action_name = 'Log On' then 'Log On'
-        when action_name in ('Open Story', 'Open Story from URL') then 'Open Story'
-        when action_name in ('Open Application', 'Open Application from URL') then 'Open Application'
-        when action_name in ('Open Application Runtime', 'Open Application Runtime from URL') then 'Open Application Runtime'
-        when action_name in ('Open Presentation', 'Open Presentation from URL') then 'Open Presentation'
-      end as action_name,
       percentile_cont(0.5) within GROUP (
         ORDER BY
           action_duration
@@ -547,13 +498,6 @@ FROM
 			story_id, is_optimized_view_mode, 
       action_name,
       action_date,
-      case 
-        when action_name = 'Log On' then 'Log On'
-        when action_name in ('Open Story', 'Open Story from URL') then 'Open Story'
-        when action_name in ('Open Application', 'Open Application from URL') then 'Open Application'
-        when action_name in ('Open Application Runtime', 'Open Application Runtime from URL') then 'Open Application Runtime'
-        when action_name in ('Open Presentation', 'Open Presentation from URL') then 'Open Presentation'
-      end as action_name,
       percentile_cont(0.5) within GROUP (
         ORDER BY
           action_duration
