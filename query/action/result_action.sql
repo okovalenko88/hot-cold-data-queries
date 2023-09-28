@@ -27,7 +27,6 @@ FROM
         PARTITION by 
         -- <Next line is auto-generated> Partition group
 			
-        action_name,
         action_date
       ) duration_perc50_ms,
       percentile_cont(0.90) within GROUP (
@@ -96,7 +95,6 @@ FROM
         PARTITION by 
         -- <Next line is auto-generated> Partition group
 			is_optimized_view_mode, 
-        action_name,
         action_date
       ) duration_perc50_ms,
       percentile_cont(0.90) within GROUP (
@@ -165,7 +163,6 @@ FROM
         PARTITION by 
         -- <Next line is auto-generated> Partition group
 			story_id, 
-        action_name,
         action_date
       ) duration_perc50_ms,
       percentile_cont(0.90) within GROUP (
@@ -234,7 +231,6 @@ FROM
         PARTITION by 
         -- <Next line is auto-generated> Partition group
 			story_id, is_optimized_view_mode, 
-        action_name,
         action_date
       ) duration_perc50_ms,
       percentile_cont(0.90) within GROUP (
@@ -305,7 +301,6 @@ FROM
         PARTITION by 
         -- <Next line is auto-generated> Partition group
 			
-        action_name,
         action_date
       ) duration_perc50_ms,
       percentile_cont(0.90) within GROUP (
@@ -374,7 +369,6 @@ FROM
         PARTITION by 
         -- <Next line is auto-generated> Partition group
 			is_optimized_view_mode, 
-        action_name,
         action_date
       ) duration_perc50_ms,
       percentile_cont(0.90) within GROUP (
@@ -443,7 +437,6 @@ FROM
         PARTITION by 
         -- <Next line is auto-generated> Partition group
 			story_id, 
-        action_name,
         action_date
       ) duration_perc50_ms,
       percentile_cont(0.90) within GROUP (
@@ -512,7 +505,6 @@ FROM
         PARTITION by 
         -- <Next line is auto-generated> Partition group
 			story_id, is_optimized_view_mode, 
-        action_name,
         action_date
       ) duration_perc50_ms,
       percentile_cont(0.90) within GROUP (

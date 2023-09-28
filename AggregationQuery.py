@@ -144,8 +144,8 @@ def run_action():
         Dim('is_optimized_view_mode', 'int'),
         # Dim('action_name_group', 'string', False)
     ]
-    run(dims, f"{folder}\\template.sql", f"{folder}\\result1.sql", 'data')
-    run(dims, f"{folder}\\template.sql", f"{folder}\\result2.sql", 'data_actiongroup')
+    run(dims, f"{folder}\\template.sql", f"{folder}\\result_action.sql", 'data')
+    run(dims, f"{folder}\\template.sql", f"{folder}\\result_groupaction.sql", 'data_actiongroup')
 
 
 if __name__ == '__main__':
