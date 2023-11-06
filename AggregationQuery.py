@@ -145,7 +145,6 @@ def run_action():
         # Dim('action_name_group', 'string', False)
     ]
     run(dims, f"{folder}\\template.sql", f"{folder}\\result_action.sql", 'data')
-    run(dims, f"{folder}\\template.sql", f"{folder}\\result_groupaction.sql", 'data_actiongroup')
 
 
 if __name__ == '__main__':
